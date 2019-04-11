@@ -57,7 +57,7 @@
 <form>
 
     <select name="Courses">
-        <option>Course 2</option>
+        <option>Course 1</option>
     </select>
 
     <input type="text" name="subject" placeholder="subject">
@@ -77,24 +77,23 @@
 <?php
     if (isset($_GET['Submit'])) {
         $result1 = $_GET['subject'];
-        $result1 = $_GET['score'];
-        $result1 = $_GET['courseunit'];
+        $result2 = $_GET['score'];
+        $result3 = $_GET['courseunit'];
         $operator = $_GET['operator'];
         switch ($operator) {
         case "None":
             echo "You need to select a method!";
         break;
         case "Add":
-            echo $result1 + $result2;
+            echo $result1 + $result2 / 15;
         break;
-        
-        
             
         }
 
     }
 
 ?>
+
 
     
 </body>
